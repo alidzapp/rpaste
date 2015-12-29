@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
   root 'program#index'
 
-  match ':controller(/:action(/:id))', :via => [:get, :post]
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
+
+  match ':controller(/:action(/:id))(.:format)' , via: [:post, :get]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
