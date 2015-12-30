@@ -1,2 +1,20 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<%= form_tag({controller: "pages_controller", action: "contact"}, method: "get", class: "form-group")%>
+<div class="form-group">
+  <%= label_tag(:q, "Name: ")%>
+  <%= text_field_tag(:q,'', :placeholder => 'John Smith' ,class: "form-control")%>
+  <br>
+  <%= label_tag(:q, "Email: ")%>
+  <%= text_field_tag(:q,'', :placeholder => 'johnsmith@example.com', class: "form-control")%>
+  <br>
+  <%= label_tag(:q, "Subject: ")%>
+  <%= text_field_tag(:q,'', :placeholder => 'Advertisement Opportunity', class: "form-control")%>
+  <br>
+  <%= label_tag(:q, "Phone: ")%>
+  <%= text_field_tag(:q,'', :placeholder => '15554443333', class: "form-control")%>
+  <br>
+  <%= label_tag(:q, "Message: ")%>
+  <%= text_area_tag(:q,'', :placeholder => 'I would like to talk to you please give me a call.', class: "form-control")%>
+  <br>
+  <%= submit_tag("Submit", class: "btn btn-primary")%>
+</div>
+<end>
